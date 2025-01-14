@@ -5,7 +5,7 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap",  // Improves font loading performance
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   description: "Discover the beautiful destinations of Jammu & Kashmir including Kathua, Bani, and Basohli. Experience local culture, heritage sites, and breathtaking landscapes.",
   keywords: ["travel", "Jammu & Kashmir", "Kathua", "Bani", "Basohli", "tourism", "India travel", "cultural tours"],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Manik Dingra" }],
   creator: "Travel With LaLhal",
   publisher: "Travel With LaLhal",
   formatDetection: {
