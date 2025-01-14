@@ -27,8 +27,9 @@ const ContactForm = () => {
 
             toast.success('Message sent successfully!');
             formRef.current.reset();
-        } catch (error: any) {
-            toast.error(error.message || 'Failed to send message. Please try again.');
+        } catch (error) {
+            const errorMessage = (error instanceof Error) ? error.message : 'Failed to send message. Please try again.';
+            toast.error(errorMessage);
         } finally {
             setIsSubmitting(false);
         }
