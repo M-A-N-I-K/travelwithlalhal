@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Plane, MapPin, Phone, Mail, Send, Compass, Users, Calendar, Star } from 'lucide-react';
+import { MapPin, Phone, Mail, Compass, Users, Calendar, Star } from 'lucide-react';
 import { Toaster } from 'react-hot-toast';
 import ContactForm from '@/components/contact-form';
 import DestinationCard from '@/components/destination-card';
@@ -98,7 +98,7 @@ function App() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90 font-outfit mb-8 max-w-2xl mx-auto"
           >
-            Experience the world's most breathtaking destinations with our expertly curated travel packages.
+            Experience the world&apos;s most breathtaking destinations with our expertly curated travel packages.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -264,7 +264,7 @@ function App() {
                 viewport={{ once: true }}
                 className="text-lg text-gray-600 font-outfit mb-8"
               >
-                Have questions about our travel packages? We're here to help you plan your perfect journey.
+                Have questions about our travel packages? We&apos;re here to help you plan your perfect journey.
               </motion.p>
 
               <div className="space-y-6">
