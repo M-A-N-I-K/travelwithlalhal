@@ -17,7 +17,6 @@ const ContactForm = () => {
         setIsSubmitting(true);
 
         try {
-            // Replace these with your EmailJS credentials
             await emailjs.sendForm(
                 process.env.NEXT_PUBLIC_SERVICE_ID as string,
                 process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
