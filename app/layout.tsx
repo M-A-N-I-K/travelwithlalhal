@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://travelwithlalhal.vercel.app/"),
   title: {
-    default: "Travel With LaLhal - Explore Jammu & Kashmir",
+    default: "Travel With Lalhal - Explore Jammu & Kashmir",
     template: "%s | Travel With LaLhal"
   },
   description: "Discover the beautiful destinations of Jammu & Kashmir including Kathua, Bani, and Basohli. Experience local culture, heritage sites, and breathtaking landscapes.",
