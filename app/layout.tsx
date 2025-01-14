@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Travel With LaLhal"
   },
   description: "Discover the beautiful destinations of Jammu & Kashmir including Kathua, Bani, and Basohli. Experience local culture, heritage sites, and breathtaking landscapes.",
-  keywords: ["travel", "Jammu & Kashmir", "Kathua", "Bani", "Basohli", "tourism", "India travel", "cultural tours"],
+  keywords: ["travel", "Jammu & Kashmir", "Kathua", "Bani", "Basohli", "tourism", "India travel", "cultural tours", "travel with lalhal"],
   authors: [{ name: "Manik Dingra" }],
   creator: "Travel With LaLhal",
   publisher: "Travel With LaLhal",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourdomain.com",
+    url: "https://travelwithlalhal.vercel.app/",
     siteName: "Travel With LaLhal",
     title: "Travel With LaLhal - Explore Jammu & Kashmir",
     description: "Discover the beautiful destinations of Jammu & Kashmir including Kathua, Bani, and Basohli.",
