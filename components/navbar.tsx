@@ -123,12 +123,13 @@ const Navbar = () => {
                                         {item.name}
                                     </motion.a>
                                 ))}
-                                <motion.button
+                                <motion.a
+                                    href={"#contact"}
                                     whileHover={{ x: 10 }}
                                     className="w-full mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg font-outfit text-sm font-medium hover:bg-blue-700"
                                 >
-                                    Book Now
-                                </motion.button>
+                                    Contact Now
+                                </motion.a>
                             </div>
                         </motion.div>
                     )}
