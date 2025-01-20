@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast';
 import ContactForm from '@/components/contact-form';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import TestimonialsSection from '@/components/testimonial-section';
 
 const destinations = [
   {
@@ -81,24 +82,10 @@ const testimonials = [
 ];
 
 const App = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const { scrollY } = useScroll();
 
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
   const heroScale = useTransform(scrollY, [0, 300], [1, 0.8]);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(nextTestimonial, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -286,88 +273,7 @@ const App = () => {
       </section>
 
       {/* Enhanced Testimonials Section */}
-      <section id='testimonials' className="py-32 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl font-bold text-gray-900 font-sora mb-6">
-              What Our Travelers Say
-            </h2>
-            <p className="text-xl text-gray-600 font-outfit max-w-2xl mx-auto">
-              Read about the experiences of travelers who have explored the world with us.
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            <div className="flex justify-between items-center mb-12">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={prevTestimonial}
-                className="p-4 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={nextTestimonial}
-                className="p-4 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </motion.button>
-            </div>
-
-            <div className="overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentTestimonial}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-gray-50 p-10 rounded-3xl shadow-lg"
-                >
-                  <div className="flex items-center mb-6">
-                    <UserCircle className='w-16 text-gray-500 h-16 rounded-full object-cover mr-6' />
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 font-sora">
-                        {testimonials[currentTestimonial].name}
-                      </h3>
-                      <p className="text-gray-600 font-outfit">
-                        {testimonials[currentTestimonial].role}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center mb-8">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-xl text-gray-700 font-outfit leading-relaxed mb-6">
-                    {testimonials[currentTestimonial].content}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            <div className="flex justify-center mt-8 space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${currentTestimonial === index ? 'bg-blue-600' : 'bg-gray-300'
-                    }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
       {/* Contact Section with Enhanced Animations */}
       <section id='contact' className="py-32 bg-gray-50">
