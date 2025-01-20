@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import { MapPin, Phone, Mail, Compass, Users, Calendar, Star, ChevronLeft, ChevronRight, Clock, Sun, Check, UserCircle } from 'lucide-react';
+import React from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { MapPin, Phone, Mail, Compass, Users, Calendar, Clock, Sun, Check } from 'lucide-react';
 import { Toaster } from 'react-hot-toast';
 import ContactForm from '@/components/contact-form';
 import Navbar from '@/components/navbar';
@@ -54,30 +54,6 @@ const features = [
     icon: Calendar,
     title: 'Flexible Booking',
     description: 'Easy booking process with free cancellation and date changes.',
-  },
-];
-
-const testimonials = [
-  {
-    name: 'Rajesh Sharma',
-    role: 'Family Traveler',
-    content: 'हमारी बसोहली यात्रा बेहद यादगार रही। गाइड ने स्थानीय संस्कृति और इतिहास के बारे में बहुत अच्छी जानकारी दी। परिवार के साथ एक शानदार अनुभव!',
-    rating: 5,
-    avatar: '/api/placeholder/50/50',
-  },
-  {
-    name: 'Priya Patel',
-    role: 'Photography Enthusiast',
-    content: 'बानी की प्राकृतिक सुंदरता अद्भुत है। पहाड़ी संस्कृति और स्थानीय व्यंजनों का अनुभव अविश्वसनीय था। टीम का आतिथ्य बेमिसाल था।',
-    rating: 5,
-    avatar: '/api/placeholder/50/50',
-  },
-  {
-    name: 'Amit Kumar',
-    role: 'Adventure Seeker',
-    content: 'कठुआ की यात्रा ने मेरी सारी उम्मीदों को पार कर दिया। रणजीत सागर झील के किनारे सूर्यास्त का नजारा कभी नहीं भूल पाऊंगा।',
-    rating: 5,
-    avatar: '/api/placeholder/50/50',
   },
 ];
 

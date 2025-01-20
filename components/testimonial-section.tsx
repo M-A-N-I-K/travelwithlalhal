@@ -55,16 +55,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
-    const [isExpanded, setIsExpanded] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (!isExpanded) {
-                setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-            }
+            setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
         }, 5000);
         return () => clearInterval(interval);
-    }, [isExpanded]);
+    }, []);
 
     const prevTestimonial = () => {
         setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -122,7 +119,7 @@ const TestimonialsSection = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -100 }}
                                 transition={{ duration: 0.5 }}
-                                className={`bg-white rounded-3xl shadow-xl p-8 md:p-12 ${isExpanded ? 'scale-105' : ''} transition-all duration-300`}
+                                className={`bg-white rounded-3xl shadow-xl p-8 md:p-12 transition-all duration-300`}
                             >
                                 {/* Quote Icon */}
                                 <div className="absolute -top-6 right-12">
